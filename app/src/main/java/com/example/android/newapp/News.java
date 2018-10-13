@@ -1,17 +1,22 @@
 package com.example.android.newapp;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class News {
     private String title;
     private String section;
-    private String author;
     private String date;
+    private String url;
+    private ArrayList<String> authors;
 
-    public News(String nTitle, String nSection, String nAuthor, String nDate){
+    public News(String nTitle, String nSection, String nDate, ArrayList<String> nAuthors, String nUrl){
         title = nTitle;
         section = nSection;
-        author = nAuthor;
         date = nDate;
+        authors = nAuthors;
+        url = nUrl;
     }
 
     public String getTitle(){
@@ -22,11 +27,15 @@ public class News {
         return section;
     }
 
-    public String getAuthor(){
-        return author;
-    }
-
     public String getDate(){
         return date;
+    }
+
+    public ArrayList<String> getAuthor(){
+        return authors;
+    }
+
+    public String getUrl(){
+        return url;
     }
 }
